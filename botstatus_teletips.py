@@ -42,12 +42,12 @@ async def main_teletips():
                             xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n🔴 **STATUS**: down ❌\n\n🤖 ** BOT **: @ {bot} \ n🔴 ** وضعیت **: پایین ❌"
                             for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
-                                    await app.send_message(int(bot_admin_id), f"🚨 **@{bot} is down** ❌\n🚨 **@{bot} خراب است** ❌")
+                                    await app.send_message(int(bot_admin_id), f"🚨 **@{bot} is down** ❌\n🚨 ** آفلاین است ** ❌")
                                 except Exception:
                                     pass
                             await app.read_history(bot)
                         else:
-                            xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n🟢 **STATUS**: alive ✅\n\n🤖 **BOT**: @{bot}\n **وضعیت**: زنده ✅"
+                            xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n🟢 **STATUS**: alive ✅\n** وضعیت **: آنلاین ✅"
                             await app.read_history(bot)
                     except FloodWait as e:
                         await asyncio.sleep(e.x)            
