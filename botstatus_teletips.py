@@ -52,8 +52,9 @@ async def main_teletips():
                     except FloodWait as e:
                         await asyncio.sleep(e.x)            
                 time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
-                last_update = time.strftime(f"%d %b %Y at %I:%M %p")
-                xxx_teletips += f"\n\nLast checked on:\n {last_update}\nTime: ({TIME_ZONE})</i>"
+                last_update = time.strftime(f"%d %b %Y")
+                last_upstat = time.strftime(f"%I:%M %p")
+                xxx_teletips += f"\n\nLast checked on:\nDate: {last_update}\nTime: {last_upstat} IST</i>"
                 await app.edit_message_text(int(CHANNEL_OR_GROUP_ID), MESSAGE_ID, xxx_teletips)
                 print(f"Last checked on: {last_update}")                
                 await asyncio.sleep(600)
