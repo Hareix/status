@@ -29,7 +29,7 @@ async def main_teletips():
                 GET_CHANNEL_OR_GROUP = await app.get_chat(int(CHANNEL_OR_GROUP_ID))
                 CHANNEL_OR_GROUP_NAME = GET_CHANNEL_OR_GROUP.title
                 CHANNEL_OR_GROUP_TYPE = GET_CHANNEL_OR_GROUP.type
-                xxx_teletips = f"📊 **<u>CHEEMSBOT STATUS</u>**\n\n**💬 {CHANNEL_OR_GROUP_TYPE}**: {CHANNEL_OR_GROUP_NAME}"
+                xxx_teletips = f"📊 **<u>CHEEMSBOT STATUS</u>**"
                 for bot in BOT_LIST:
                     try:
                         yyy_teletips = await app.send_message(bot, "/start")
@@ -53,10 +53,10 @@ async def main_teletips():
                         await asyncio.sleep(e.x)            
                 time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
                 last_update = time.strftime(f"%d %b %Y at %I:%M %p")
-                xxx_teletips += f"\n\n✔️ Last checked on: {last_update} ({TIME_ZONE})</i>"
+                xxx_teletips += f"\n\nLast checked on:\n {last_update}\nTime: ({TIME_ZONE})</i>"
                 await app.edit_message_text(int(CHANNEL_OR_GROUP_ID), MESSAGE_ID, xxx_teletips)
                 print(f"Last checked on: {last_update}")                
-                await asyncio.sleep(60)
+                await asyncio.sleep(600)
                         
 app.run(main_teletips())
 
