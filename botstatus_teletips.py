@@ -40,11 +40,6 @@ async def main_teletips():
                             bbb = ccc.message_id
                         if aaa == bbb:
                             xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n🔴 **STATUS**: down ❌\n🔴 ** وضعیت **: آفلاین"
-                            for bot_admin_id in BOT_ADMIN_IDS:
-                                try:
-                                    await app.send_message(int(bot_admin_id), f"🚨 **@{bot} is down** ❌\n🚨 ** آفلاین است ** ❌")
-                                except Exception:
-                                    pass
                             await app.read_history(bot)
                         else:
                             xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n🟢 **STATUS**: alive ✅\n** وضعیت **: آنلاین ✅"
