@@ -29,7 +29,7 @@ async def main_teletips():
                 GET_CHANNEL_OR_GROUP = await app.get_chat(int(CHANNEL_OR_GROUP_ID))
                 CHANNEL_OR_GROUP_NAME = GET_CHANNEL_OR_GROUP.title
                 CHANNEL_OR_GROUP_TYPE = GET_CHANNEL_OR_GROUP.type
-                xxx_teletips = f"📊 **<u>CHEEMSBOT STATUS</u>**"
+                xxx_teletips = f"📊 **<u>CHEEMS STATUS</u>**"
                 for bot in BOT_LIST:
                     try:
                         yyy_teletips = await app.send_message(bot, "/start")
@@ -39,10 +39,10 @@ async def main_teletips():
                         for ccc in zzz_teletips:
                             bbb = ccc.message_id
                         if aaa == bbb:
-                            xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n🔴 **STATUS**: down ❌\n🔴 ** وضعیت **: آفلاین"
+                            xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n🔴 **STATUS**: down ❌"
                             await app.read_history(bot)
                         else:
-                            xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n🟢 **STATUS**: alive ✅\n** وضعیت **: آنلاین ✅"
+                            xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n🟢 **STATUS**: alive ✅"
                             await app.read_history(bot)
                     except FloodWait as e:
                         await asyncio.sleep(e.x)            
