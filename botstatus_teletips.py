@@ -6,7 +6,7 @@ import pytz
 import os
 
 app = Client(
-    api_id = int(os.environ["API_ID", "19335070"]),
+    api_id = int(os.environ["API_ID"], ["19335070"]),
     api_hash = os.environ["API_HASH", "36e8b8709cf6579f11559692b70f0c46"],
     session_name = os.environ["SESSION_NAME", "AQC0FAJf0W3QTtZL9gHLZfxmZRHQhpMBpdGgLclWepY0S-iIh7zFh1LIhkT4HRjNBfo8PJtc_Bk2PEMHb8bQX1AKxY3hyagDXd2k6LLE3aN077h-1tMcoPHAhY0PeejmVUfJUOzEjsZWrgUUpRf67JcLsvBfvB6o5FR9vdUubc9-Q5P5JZlWFLv2jPvXffLLFBTQpmXPWQ_O9-TPhH_n26ApOuEtyBhiRyrGJkj7g4WM2mh8W-Fwn43v99cyi3lYoZsb0U0uLjMy8ja2CWtUNm6wzldM8JlHDMchJnt5Gz6MdVla7VCZdGG3K7dyutP4cld7g_carPcFZ-o2ZVZjuPlZAAAAAVIiJMcA"]
 )
