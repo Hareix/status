@@ -33,7 +33,7 @@
 
 [🎥 Tutorial Video: ](https://www.youtube.com/watch?v=23mAMuP0tVw)    
     
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ashisharmy/statuschecker)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/PuneetStar/statuschecker)
     
 ## Credits
 - [TeLe TiPs](https://github.com/teletips)
