@@ -6,14 +6,14 @@ import pytz
 import os
 
 app = Client(
-    api_id = int(os.environ.get("API_ID", "19335070")),
-    api_hash = os.environ.get("API_HASH", "36e8b8709cf6579f11559692b70f0c46"),
-    session_name = os.environ.get("SESSION_NAME", "AQC0FAJf0W3QTtZL9gHLZfxmZRHQhpMBpdGgLclWepY0S-iIh7zFh1LIhkT4HRjNBfo8PJtc_Bk2PEMHb8bQX1AKxY3hyagDXd2k6LLE3aN077h-1tMcoPHAhY0PeejmVUfJUOzEjsZWrgUUpRf67JcLsvBfvB6o5FR9vdUubc9-Q5P5JZlWFLv2jPvXffLLFBTQpmXPWQ_O9-TPhH_n26ApOuEtyBhiRyrGJkj7g4WM2mh8W-Fwn43v99cyi3lYoZsb0U0uLjMy8ja2CWtUNm6wzldM8JlHDMchJnt5Gz6MdVla7VCZdGG3K7dyutP4cld7g_carPcFZ-o2ZVZjuPlZAAAAAVIiJMcA")
+    api_id = int(os.environ.get("API_ID", "6")),
+    api_hash = os.environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e"),
+    session_name = os.environ.get("SESSION_NAME", "AQA3gCULuAYrn5YkT4vlStbyUWHUIfbGiah-K8SdpwDMVc__KGofsexbASuuV9nEt-qzSG1GfOWHGlwsbII8nErcxNnGtK73Jxugnp1LAVPrWOs_KQnDSHMILSZScHI2wUHLuL118o_o_MZ9JfwZdK3sWF9eOO4HLsa2Eqsz4mZIvEJ1GpWll4pDLBqeqhWlD4UsbdDp6tlOWwpAznsGifniG9YB_s_P4hJREPQ7lbBGnMS1W66yIBFnhp7JlkEg6FOc97DXtruNyGV1U5UUQ-LTlEQK38epZg8k02mMYqGFMV-0lMi4ClB0Bg8smpOrveFLagd3RRn-j9EU76z1hRW_AAAAAVHU63sA")
 )
 TIME_ZONE = os.environ.get("TIME_ZONE", "Asia/Kolkata")
 BOT_LIST = [i.strip() for i in os.environ.get("BOT_LIST", "cheemsvcbot nonsfwrobot").split(' ')]
 CHANNEL_OR_GROUP_ID = int(os.environ.get("CHANNEL_OR_GROUP_ID", "-1001361125382"))
-MESSAGE_ID = int(os.environ.get("MESSAGE_ID", "216"))
+MESSAGE_ID = int(os.environ.get("MESSAGE_ID", "3"))
 BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS", "5545068262").split(' ')]
 
 async def main_teletips():
