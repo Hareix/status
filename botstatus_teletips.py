@@ -25,11 +25,11 @@ async def main_teletips():
                 CHANNEL_OR_GROUP_TYPE = GET_CHANNEL_OR_GROUP.type
                 xxx_teletips = f"📊 **<u>CHEEMS STATUS</u>**"
                 for bot in BOT_LIST:
-                    try:
                         await app.send_message(bot, "/respondtocheemschecker")
                         print("Checking")
                         await asyncio.sleep(20)
                 for bot in BOT_LIST:
+                    try:
                           print(bot)
                           async for mssg in app.search_messages(bot, "", limit=1):
                             if str(mssg.text) == str("/respondtocheemschecker"):
