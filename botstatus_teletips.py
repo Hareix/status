@@ -20,7 +20,6 @@ BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS", "554506
 async def main_teletips():
     async with app:
             while True:
-                print("Checking...")
                 GET_CHANNEL_OR_GROUP = await app.get_chat(int(CHANNEL_OR_GROUP_ID))
                 CHANNEL_OR_GROUP_NAME = GET_CHANNEL_OR_GROUP.title
                 CHANNEL_OR_GROUP_TYPE = GET_CHANNEL_OR_GROUP.type
@@ -28,7 +27,10 @@ async def main_teletips():
                 for bot in BOT_LIST:
                     try:
                         await app.send_message(bot, text="/respondtocheemschecker")
-                        async for mssg in app.search_messages(bot, "", limit=1):
+                        print("Checking")
+                        for bot in BOT_LIST:
+                          print(bot)
+                          async for mssg in app.search_messages(bot, "", limit=1):
                             await asyncio.sleep(20)
                             if str(mssg.text) == str("/respondtocheemschecker"):
                                 xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n\n🔴 **STATUS**: down ❌"
