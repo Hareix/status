@@ -29,7 +29,7 @@ async def main_teletips():
                     try:
                         await app.send_message(bot, text="/respondtocheemschecker")
                         async for mssg in app.search_messages(bot, "", limit=1):
-                            await asyncio.sleep(10)
+                            await asyncio.sleep(20)
                             if str(mssg.text) == str("/respondtocheemschecker"):
                                 xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n\n🔴 **STATUS**: down ❌"
                                 for bot_admin_id in BOT_ADMIN_IDS:
