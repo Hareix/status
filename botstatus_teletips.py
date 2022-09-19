@@ -33,7 +33,7 @@ async def main_teletips():
                           print(bot)
                           async for mssg in app.search_messages(bot, "", limit=1):
                             if str(mssg.text) == str("/respondtocheemschecker"):
-                                xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n\n🔴 **STATUS**: down ❌"
+                                xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n\n🔴 **STATUS: offline ❌**"
                                 try:
                                     await app.send_message(int(BOT_ADMIN_ID), f"🚨 **Beep! Beep!! @{bot} is down** ❌")
                                 except Exception:
@@ -45,7 +45,7 @@ async def main_teletips():
                               users = text.split("_+_")[2]
                               playlist = text.split("_+_")[3]
                               active = text.split("_+_")[4]
-                              xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n\n🟢 **STATUS**: online ✅\n\n**🎛️ Server Load**: {cpu}\n\n**🎧 Active Voice Calls**: {active}\n\n**📈 Served Chats**: {chats}\n\n**👤 Served Users**: {users}\n\n**🎶 Total Playlists**: {playlist}"
+                              xxx_teletips += f"\n\n🤖 **BOT: @{bot}**\n\n🟢 **STATUS: online ✅**\n\n**🎛️ Server Load: {cpu}**\n\n**🎧 Active Voice Calls: {active}**\n\n**📈 Served Chats: {chats}**\n\n**👤 Served Users: {users}**\n\n**📋 Total Playlists: {playlist}**"
                     except FloodWait as e:
                         await asyncio.sleep(e.x)            
                 time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
@@ -54,6 +54,6 @@ async def main_teletips():
                 xxx_teletips += f"\n\nLast checked on:\nDate: {last_update}\nTime: {last_upstat} IST</i>"
                 await app.edit_message_text(int(CHANNEL_OR_GROUP_ID), MESSAGE_ID, xxx_teletips)
                 print(f"Last checked on: {last_update}")                
-                await asyncio.sleep(600)
+                await asyncio.sleep(300)
                         
 app.run(main_teletips())
