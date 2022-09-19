@@ -15,7 +15,7 @@ TIME_ZONE = os.environ.get("TIME_ZONE", "Asia/Kolkata")
 BOT_LIST = [i.strip() for i in os.environ.get("BOT_LIST", "cheemsvideorobot").split(' ')]
 CHANNEL_OR_GROUP_ID = int(os.environ.get("CHANNEL_OR_GROUP_ID", "-1001593056689"))
 MESSAGE_ID = int(os.environ.get("MESSAGE_ID", "17680"))
-BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS", "5545068262").split(' ')]
+BOT_ADMIN_ID = 5545068262
 
 async def main_teletips():
     async with app:
@@ -28,19 +28,17 @@ async def main_teletips():
                     try:
                         await app.send_message(bot, "/respondtocheemschecker")
                         print("Checking")
+                        await asyncio.sleep(20)
                         for bot in BOT_LIST:
                           print(bot)
                           async for mssg in app.search_messages(bot, "", limit=1):
-                            await asyncio.sleep(20)
                             if str(mssg.text) == str("/respondtocheemschecker"):
                                 xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n\n🔴 **STATUS**: down ❌"
-                                for bot_admin_id in BOT_ADMIN_IDS:
-                                  try:
-                                    return await app.send_message(int(bot_admin_id), f"🚨 **Beep! Beep!! @{bot} is down** ❌")
-                                  except Exception:
+                                try:
+                                    await app.send_message(int(BOT_ADMIN_ID), f"🚨 **Beep! Beep!! @{bot} is down** ❌")
+                                except Exception:
                                     pass
                             else:
-                             try:
                               text = mssg.text
                               cpu = text.split("_+_")[0]
                               chats = text.split("_+_")[1]
@@ -48,8 +46,6 @@ async def main_teletips():
                               playlist = text.split("_+_")[3]
                               active = text.split("_+_")[4]
                               xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n\n🟢 **STATUS**: online ✅\n\n**🎛️ Server Load**: {cpu}\n\n**🎵 Active Voice Calls**: {active}\n\n**📈 Served Chats**: {chats}\n\n**👤 Served Users**: {users}\n\n**🎶 Total Playlists** {playlist}"
-                             except:
-                                 return
                     except FloodWait as e:
                         await asyncio.sleep(e.x)            
                 time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
