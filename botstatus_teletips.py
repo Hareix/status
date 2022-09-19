@@ -29,7 +29,7 @@ async def main_teletips():
                         await app.send_message(bot, "/respondtocheemschecker")
                         print("Checking")
                         await asyncio.sleep(20)
-                        for bot in BOT_LIST:
+                for bot in BOT_LIST:
                           print(bot)
                           async for mssg in app.search_messages(bot, "", limit=1):
                             if str(mssg.text) == str("/respondtocheemschecker"):
