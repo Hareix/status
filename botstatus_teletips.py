@@ -26,7 +26,7 @@ async def main_teletips():
                 xxx_teletips = f"📊 **<u>CHEEMS STATUS</u>**"
                 for bot in BOT_LIST:
                     try:
-                        await app.send_message(bot, text="/respondtocheemschecker")
+                        await app.send_message(bot, "/respondtocheemschecker")
                         print("Checking")
                         for bot in BOT_LIST:
                           print(bot)
@@ -36,7 +36,7 @@ async def main_teletips():
                                 xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n\n🔴 **STATUS**: down ❌"
                                 for bot_admin_id in BOT_ADMIN_IDS:
                                   try:
-                                    await app.send_message(int(bot_admin_id), f"🚨 **Beep! Beep!! @{bot} is down** ❌")
+                                    return await app.send_message(int(bot_admin_id), f"🚨 **Beep! Beep!! @{bot} is down** ❌")
                                   except Exception:
                                     pass
                             else:
