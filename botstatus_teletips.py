@@ -12,9 +12,9 @@ app = Client(
     session_name = os.environ.get("SESSION_NAME", "AQC43rnvWI4C_XGuL_CO2ZUJmhIjKKygNKVBEeljSVNXlUeonwIPoPqz-vg4NrFTFXEoOTUEBz5aLhk7AqF36kNt0CO6ZCDXbzCP4bXJKFTpFYKEzNCr-NAHLlL5dXaGGaSCcQGwJ8niI4kAMZaPWj49Ezy0j66YH5brlBlILOclYYI3jrgNVvkQi-dl-N21K9N-0gQHrb-h4i73BTKDh47b9KCjis6Tg5dE0x7HioY8r1QisMzSAJfpbk9DzvEwIwRM9qLjBYPM2Dn-4fdZpXDVzKe0ytn3sLk-yN9AB3bqmvITg2z-ThW63QH0MBPymtWanW1gnrAGpZx2U0VDPqRsAAAAAVHU63sA")
 )
 TIME_ZONE = os.environ.get("TIME_ZONE", "Asia/Kolkata")
-BOT_LIST = [i.strip() for i in os.environ.get("BOT_LIST", "cheemsvideorobot").split(' ')]
-CHANNEL_OR_GROUP_ID = int(os.environ.get("CHANNEL_OR_GROUP_ID", "-1001593056689"))
-MESSAGE_ID = int(os.environ.get("MESSAGE_ID", "17680"))
+BOT_LIST = [i.strip() for i in os.environ.get("BOT_LIST", "cheemsvcbot").split(' ')]
+CHANNEL_OR_GROUP_ID = int(os.environ.get("CHANNEL_OR_GROUP_ID", "-1001361125382"))
+MESSAGE_ID = int(os.environ.get("MESSAGE_ID", "224"))
 BOT_ADMIN_ID = 5545068262
 
 async def main_teletips():
