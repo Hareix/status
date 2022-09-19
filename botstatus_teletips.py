@@ -45,7 +45,7 @@ async def main_teletips():
                               users = text.split("_+_")[2]
                               playlist = text.split("_+_")[3]
                               active = text.split("_+_")[4]
-                              xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n\n🟢 **STATUS**: online ✅\n\n**🎛️ Server Load**: {cpu}\n\n**🎵 Active Voice Calls**: {active}\n\n**📈 Served Chats**: {chats}\n\n**👤 Served Users**: {users}\n\n**🎶 Total Playlists** {playlist}"
+                              xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n\n🟢 **STATUS**: online ✅\n\n**🎛️ Server Load**: {cpu}\n\n**🎵 Active Voice Calls**: {active}\n\n**📈 Served Chats**: {chats}\n\n**👤 Served Users**: {users}\n\n**🎶 Total Playlists**: {playlist}"
                     except FloodWait as e:
                         await asyncio.sleep(e.x)            
                 time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
