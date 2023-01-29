@@ -10,6 +10,7 @@ app = Client(
     api_hash = os.environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e"),
     session_name = os.environ.get("SESSION_NAME", "AQBb9MX35Qc2R2lwUKmK6_g0L-jRMi-dqFr0PVlzfLSRkK-xDdIMkJovcdJWrZFXjK9ojJSA6U2Oak9P3BTnoyTbIY6prVzxR8jyrXVrcDcM2PvEpRUKaJk2i_aLa3aHEzqs6XJICX_DdQpuDVgLN9uxlldLw5trIgKudm4oCTerHwQBa9uYF9mG9yY7shqS-kl3kKtoCZkB9yj4q4rDXm2R9zPHXtCZJhx3967nv5qARUXHYdQjYtCrsUitAsfveirSei-OZG0MIalzkFS4rPF-MgQrmCOHEeuMNDRylN8l-9FdXk25eVJPuRnkqDru0RkvXGQryHdGM8JZs4R77M1UAAAAATX0N88A")
 )
+
 TIME_ZONE = os.environ.get("TIME_ZONE", "Asia/Kolkata")
 BOT_LIST = [i.strip() for i in os.environ.get("BOT_LIST", "cheemsvcbot CheemsChatBot cheemsnsfwbot").split(' ')]
 CHANNEL_OR_GROUP_ID = int(os.environ.get("CHANNEL_OR_GROUP_ID", "-1001863324887"))
