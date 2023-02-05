@@ -29,7 +29,7 @@ async def main_teletips():
                     try:
                         yyy_teletips = await app.send_message(bot, "/start")
                         aaa = yyy_teletips.message_id
-                        await asyncio.sleep(10)
+                        await asyncio.sleep(20)
                         zzz_teletips = await app.get_history(bot, limit = 1)
                         for ccc in zzz_teletips:
                             bbb = ccc.message_id
