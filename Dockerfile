@@ -5,5 +5,4 @@ RUN pip3 install -U pip
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -U -r requirements.txt
 COPY . .
-EXPOSE 8080
 CMD ["python3", "botstatus_teletips.py"]
