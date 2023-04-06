@@ -8,7 +8,7 @@ import os
 app = Client(
     api_id = int(os.environ.get("API_ID", "6")),
     api_hash = os.environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e"),
-    session_name = os.environ.get("SESSION_NAME", "BQBm3cU3AaYcL_CJguSWTDzQs6AIQm4y0PkjT8-WpYsjijWfXXSVvUvL4MZQ8MVb96M4kB1zYvwsm30tOBIkDSYjNyF7Xdri3Rj5C7izw9IFPYQeK8BskJdXKTDZzxW_lIoNnuk43fTw6-C8ShfHBaIx2LjwfkciYZ_sIIOFavvJ8O0tXPk-XiQ1XZvCO8UQVE-3EsPXArAXPDfzWllkPKSXfjVVKpaeR9sRZEu6KkDN_Ejqu7s06vOKMEXRPQ2fzEsdQhHIU7B3VN4MS5k-4rtH4LhRT9N78GiY4Z80A8TivsRXIIISbeQldZQTKbCkNcVy1I2Czb9I4Sg8qSMi5SC7AAAAAS7mDAkA")
+    session_name = os.environ.get("SESSION_NAME", "BQCYq9tSQt5R5dUlo6LHEj30sKsIjJPhwbjrzhQi9BSldNoB8T85mFfLAt-QzuxYN-WQWOgO-vmSdGkvh8NMXSQ4XhG16QRDPb-BhsCoERXfk-i4oF2zF6YheKC2TvjdlhmHnpano2609PWSX40iAPNKiAcbxZ3mK0OlR6D520XsruMZYWjaExwWpBY3pqtMP7XY9ksLPoG3v5LPBb1JZcztQfgWMTfiDN4RtBcrW0Ava9Vs9TBYJIg7TJb7PT-4dyyWwRD1TTZZTLZbgYKNGHcDcMGXHBqPr27yvpSmRkXJQhuzc-eTz-tEwzaej-V8KQRbliXULrZ95h-6fHY2CZQ4AAAAAS7mDAkA")
 )
 
 TIME_ZONE = os.environ.get("TIME_ZONE", "Asia/Kolkata")
