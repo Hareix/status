@@ -12,7 +12,7 @@ app = Client(
 )
 
 TIME_ZONE = os.environ.get("TIME_ZONE", "Asia/Kolkata")
-BOT_LIST = [i.strip() for i in os.environ.get("BOT_LIST", "cheemsvcbot CheemsChatBot CheemsAdultBot").split(' ')]
+BOT_LIST = [i.strip() for i in os.environ.get("BOT_LIST", "cheemsvcbot CheemsChatBot CheemsBobsBot").split(' ')]
 CHANNEL_OR_GROUP_ID = int(os.environ.get("CHANNEL_OR_GROUP_ID", "-1001863324887"))
 MESSAGE_ID = int(os.environ.get("MESSAGE_ID", "2"))
 BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS", "5545068262").split(' ')]
