@@ -1,6 +1,10 @@
 from animdl.core.cli.commands.grab import animdl_grab
 from aiohttp import web
+import asyncio
 import json
+from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
+
+data_dict = {}
 
 async def start_web_client():
     app = web.Application()
@@ -12,7 +16,18 @@ async def start_web_client():
     site = web.TCPSite(runner, '0.0.0.0', 8000)  # Replace with your desired host and port
     await site.start()
     print("Web client started")
-    
+    await asyncio.create_task(hen_videos())
+
+async def store_streams():
+      cursor = streamdb.find({})
+      async for document in cursor:
+        title = document.get('title')
+        episode = document.get('episode')
+        streams = document.get('streams')
+        key = (str(title), int(episode))
+        if key not in data_dict:
+            data_dict[key] = streams
+
 async def hello_world(request):
     return web.Response(text='cheems')
 
