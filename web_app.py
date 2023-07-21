@@ -6,8 +6,8 @@ from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 
 data_dict = {}
 mongo = MongoClient("mongodb+srv://sneha:sneha@cluster0.zhphhyu.mongodb.net/?retryWrites=true&w=majority")
-    db = mongo.cheemsnsfk
-    streamdb = db.animestream
+db = mongo.cheemsnsfk
+streamdb = db.animestream
 
 async def start_web_client():
     app = web.Application()
