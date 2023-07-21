@@ -5,6 +5,9 @@ import json
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 
 data_dict = {}
+mongo = MongoClient("mongodb+srv://sneha:sneha@cluster0.zhphhyu.mongodb.net/?retryWrites=true&w=majority")
+    db = mongo.cheemsnsfk
+    streamdb = db.animestream
 
 async def start_web_client():
     app = web.Application()
@@ -16,8 +19,18 @@ async def start_web_client():
     site = web.TCPSite(runner, '0.0.0.0', 8000)  # Replace with your desired host and port
     await site.start()
     print("Web client started")
+    await asyncio.create_task(store_streams())
     await asyncio.create_task(hen_videos())
 
+
+async def hen_videoss():
+       while not await asyncio.sleep(3600):
+           await store_streams()
+           asyncio.create_task(hen_videoss())
+           break
+       asyncio.create_task(hen_videoss())
+
+        
 async def store_streams():
       cursor = streamdb.find({})
       async for document in cursor:
