@@ -57,6 +57,7 @@ async def store_streams():
         episode = document.get('episode')
         streams = document.get('streams')
         key = (str(title), int(episode))
+        print(key)
         if key not in data_dict:
             data_dict[key] = streams
 
