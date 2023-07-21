@@ -1,4 +1,4 @@
-from app import start_web_client
+from web_app import start_web_client
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 import asyncio
