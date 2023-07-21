@@ -15,6 +15,18 @@ mongo = MongoClient("mongodb+srv://sneha:sneha@cluster0.zhphhyu.mongodb.net/?ret
 db = mongo.cheemsnsfk
 streamdb = db.animestream
 
+app = Client(
+    api_id = int(os.environ.get("API_ID", "6")),
+    api_hash = os.environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e"),
+    session_name = os.environ.get("SESSION_NAME", "BQBMvtKet134IGCmzPwuIcpIQ1W33Kr7tyUrspwnHjTWzwsG0mzxmsOlmQTobYsHAKDETHay069H0oCtyjv0DYve_naU945POe8qaR5s_uw2hYxYZWt9MYudraMp96xOMT98fOGqUSFI5SQgIL6N2mfH9dhsgTZOMhdRpO3amIn6fL3UtjfXN2EHFAJIoqx5qyZLcRogKmnnPZvUA-O2tapqXVfnIs4qxYObhJCpi3VAkQmYVcEH1dTsIX1GNysxK3M-0ZXEB23Rl6_rtNzpV0Z8CCvnZrocvbPmK2-H1AYCGmLQzER5GehrUCmVVsyv1BYII-NLDAXfsVbDYciZ0o6SAAAAAS7mDAkA")
+)
+
+TIME_ZONE = os.environ.get("TIME_ZONE", "Asia/Kolkata")
+BOT_LIST = [i.strip() for i in os.environ.get("BOT_LIST", "cheemsvcbot CheemsChatBot CheemsBobsBot").split(' ')]
+CHANNEL_OR_GROUP_ID = int(os.environ.get("CHANNEL_OR_GROUP_ID", "-1001863324887"))
+MESSAGE_ID = int(os.environ.get("MESSAGE_ID", "2"))
+BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS", "5545068262").split(' ')]
+
 async def start_web_client():
     cheb = web.Application()
     cheb.router.add_get('/', hello_world)
@@ -79,18 +91,6 @@ async def get_anime(request):
     except:
         return web.json_response({'error': 'Data not found for the provided title and episode'}, status=404)
         
-app = Client(
-    api_id = int(os.environ.get("API_ID", "6")),
-    api_hash = os.environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e"),
-    session_name = os.environ.get("SESSION_NAME", "BQBMvtKet134IGCmzPwuIcpIQ1W33Kr7tyUrspwnHjTWzwsG0mzxmsOlmQTobYsHAKDETHay069H0oCtyjv0DYve_naU945POe8qaR5s_uw2hYxYZWt9MYudraMp96xOMT98fOGqUSFI5SQgIL6N2mfH9dhsgTZOMhdRpO3amIn6fL3UtjfXN2EHFAJIoqx5qyZLcRogKmnnPZvUA-O2tapqXVfnIs4qxYObhJCpi3VAkQmYVcEH1dTsIX1GNysxK3M-0ZXEB23Rl6_rtNzpV0Z8CCvnZrocvbPmK2-H1AYCGmLQzER5GehrUCmVVsyv1BYII-NLDAXfsVbDYciZ0o6SAAAAAS7mDAkA")
-)
-
-TIME_ZONE = os.environ.get("TIME_ZONE", "Asia/Kolkata")
-BOT_LIST = [i.strip() for i in os.environ.get("BOT_LIST", "cheemsvcbot CheemsChatBot CheemsBobsBot").split(' ')]
-CHANNEL_OR_GROUP_ID = int(os.environ.get("CHANNEL_OR_GROUP_ID", "-1001863324887"))
-MESSAGE_ID = int(os.environ.get("MESSAGE_ID", "2"))
-BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS", "5545068262").split(' ')]
-
 async def main_teletips():
     async with app:
             while True:
