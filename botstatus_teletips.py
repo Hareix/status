@@ -52,5 +52,10 @@ async def main_teletips():
                 await app.edit_message_text(int(CHANNEL_OR_GROUP_ID), MESSAGE_ID, xxx_teletips)
                 print(f"Last checked on: {last_update}")                
                 await asyncio.sleep(600)
-await start_web_client()                      
-app.run(main_teletips())
+
+async def run_app():
+    await start_web_client()
+    await app.run(main_teletips())
+
+if __name__ == "__main__":
+    asyncio.run(run_app())
