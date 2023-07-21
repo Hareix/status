@@ -37,7 +37,7 @@ async def start_web_client():
     site = web.TCPSite(runner, '0.0.0.0', 8000)  # Replace with your desired host and port
     await site.start()
     print("Web client started")
-    await app.run(main_teletips())    
+    app.run(main_teletips())    
     await asyncio.create_task(store_streams())
     await asyncio.create_task(hen_videoss())
 
