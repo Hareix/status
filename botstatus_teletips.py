@@ -29,19 +29,20 @@ async def main_teletips():
                     try:
                         yyy_teletips = await app.send_message(bot, "/start")
                         aaa = yyy_teletips.message_id
+                        hel = await app.get_users(bot)
                         await asyncio.sleep(20)
                         zzz_teletips = await app.get_history(bot, limit = 1)
                         for ccc in zzz_teletips:
                             bbb = ccc.message_id
                         if aaa == bbb:
-                            xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n\n🔴 **STATUS**: down ❌"
+                            xxx_teletips += f"\n\n🤖 **BOT**: {hel.mention()}\n\n🔴 **STATUS**: down ❌"
                             for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
-                                    await app.send_message(int(bot_admin_id), f"🚨 **Beep! Beep!! @{bot} is down** ❌")
+                                    await app.send_message(int(bot_admin_id), f"🚨 **Beep! Beep!! {hel.mention()} is down** ❌")
                                 except Exception:
                                     pass
                         else:
-                            xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n\n🟢 **STATUS**: alive ✅"                     
+                            xxx_teletips += f"\n\n🤖 **BOT**: {hel.mention()}\n\n🟢 **STATUS**: alive ✅"                     
                     except FloodWait as e:
                         await asyncio.sleep(e.x)            
                 time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
