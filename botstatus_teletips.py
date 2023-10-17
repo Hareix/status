@@ -9,7 +9,7 @@ app = Client(
     name = "cheems",
     api_id = int(os.environ.get("API_ID", "6")),
     api_hash = os.environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e"),
-    session_string = os.environ.get("SESSION_NAME", "BQBMvtKet134IGCmzPwuIcpIQ1W33Kr7tyUrspwnHjTWzwsG0mzxmsOlmQTobYsHAKDETHay069H0oCtyjv0DYve_naU945POe8qaR5s_uw2hYxYZWt9MYudraMp96xOMT98fOGqUSFI5SQgIL6N2mfH9dhsgTZOMhdRpO3amIn6fL3UtjfXN2EHFAJIoqx5qyZLcRogKmnnPZvUA-O2tapqXVfnIs4qxYObhJCpi3VAkQmYVcEH1dTsIX1GNysxK3M-0ZXEB23Rl6_rtNzpV0Z8CCvnZrocvbPmK2-H1AYCGmLQzER5GehrUCmVVsyv1BYII-NLDAXfsVbDYciZ0o6SAAAAAS7mDAkA")
+    session_string = os.environ.get("SESSION_NAME", "BQAS828AT5b_De2Ea2Cmt3fpLiA8a6tZPqEfhzk9byII_cqt_aRaAr8GM1Sj9A2qUy0WdTFKgu2Ht20T-Hkvrx-W5j22IM9T0KJKitl95KO0q24cP3roYDnPA1TgSXmg-ZwSztKuwfB6o4sctiNS5f8Jpz5pUvUMDtVFFXNmArWZ6Eb6e43cgKcMGi7JuhcGzX9RFQ_gOveQ_JFM0dlAwn5F7jzgS05QeRUgJtQdoHqZZ_mFy-XwHSIgNwPUcby5EVlQL3JhY1IZfU9THg03WmaHKT7e0Ak5GXgA1YOHCguS8FpiqpKfDFp9ZjhwZ3r0bVBuV6se0avYkZQV4CWLwXazSxVgNQAAAAEu5gwJAA")
 )
 
 TIME_ZONE = os.environ.get("TIME_ZONE", "Asia/Kolkata")
