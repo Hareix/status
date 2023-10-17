@@ -32,6 +32,7 @@ async def main_teletips():
                         aaa = yyy_teletips.id
                         await asyncio.sleep(20)
                         zzz_teletips = app.get_chat_history(bot, limit = 1)
+                        print(zzz_teletips)
                         for ccc in zzz_teletips:
                             bbb = ccc.id
                         if aaa == bbb:
