@@ -31,8 +31,7 @@ async def main_teletips():
                         yyy_teletips = await app.send_message(bot, "/start")
                         aaa = yyy_teletips.id
                         await asyncio.sleep(20)
-                        async for zzz_teletips in app.get_chat_history(bot, limit = 1):
-                         print(zzz_teletips)
+                        async for zzz_teletips in app.get_chat_history(bot, limit = 1):                        
                          bbb = zzz_teletips.id
                         if aaa == bbb:
                             xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n\n🔴 **STATUS**: down ❌"
