@@ -19,7 +19,7 @@ API_ID = int(getenv("API_ID", "6"))
 API_HASH = getenv("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", "6842257955:AAFDEeJepF_yO7CJ9YV0Q90MEWuYRn9_S_8")
+BOT_TOKEN = getenv("BOT_TOKEN", "6842257955:AAHihJHUC4uRZILyEN99P79zFcnfJIBz-kE")
 
 # SUDO USERS
 SUDO_USER = list(
