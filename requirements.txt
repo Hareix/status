@@ -5,3 +5,4 @@ Flask
 gunicorn
 aiohttp
 uvloop
+python-dotenv
