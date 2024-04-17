@@ -4,3 +4,4 @@ pytz
 Flask
 gunicorn
 aiohttp
+uvloop
