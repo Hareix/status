@@ -3,7 +3,9 @@ from pyrogram.errors import FloodWait
 import asyncio
 import datetime
 import pytz
-import os
+import os, uvloop
+
+uvloop.install()
 
 app = Client(
     name = "cheems",
@@ -19,7 +21,6 @@ MESSAGE_ID = int(os.environ.get("MESSAGE_ID", "2"))
 BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS", "5545068262").split(' ')]
 
 async def main_teletips():
-    async with app:
             while True:
                 print("Checking...")
                 GET_CHANNEL_OR_GROUP = await app.get_chat(int(CHANNEL_OR_GROUP_ID))
@@ -51,5 +52,12 @@ async def main_teletips():
                 await app.edit_message_text(int(CHANNEL_OR_GROUP_ID), MESSAGE_ID, xxx_teletips)
                 print(f"Last checked on: {last_update}")                
                 await asyncio.sleep(600)
-                        
-app.run(main_teletips())
+
+
+async def init():
+  await app.start()
+  asyncio.create_task(main_teletips())
+  await idle()
+  
+if __name__ == "__main__":
+    loop.run_until_complete(init())
