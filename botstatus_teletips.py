@@ -6,6 +6,7 @@ import pytz
 import os, uvloop
 
 uvloop.install()
+loop = asyncio.get_event_loop()
 
 app = Client(
     name = "cheems",
