@@ -22,6 +22,7 @@ BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS", "554506
 
 async def main_teletips():
             while True:
+                await asyncio.sleep(2)
                 print("Checking...")
                 GET_CHANNEL_OR_GROUP = await app.get_chat(int(CHANNEL_OR_GROUP_ID))
                 CHANNEL_OR_GROUP_NAME = GET_CHANNEL_OR_GROUP.title
