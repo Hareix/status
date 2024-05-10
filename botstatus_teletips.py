@@ -5,7 +5,7 @@ import datetime
 import pytz
 import os, uvloop
 
-uvloop.install()
+#uvloop.install()
 loop = asyncio.get_event_loop()
 
 app = Client(
