@@ -41,10 +41,11 @@
 
     <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
     <script>
+        var thumbUrl = "{{ thumb }}";
         var myFP = fluidPlayer('video-id', {
             "layoutControls": {
                 "controlBar": {
-                    "autoHideTimeout": 3,
+                    "autoHideTimeout": 5,
                     "animated": true,
                     "autoHide": true
                 },
@@ -56,7 +57,7 @@
                 "allowDownload": false,
                 "playButtonShowing": true,
                 "fillToContainer": true,
-                "posterImage": "{{ thumb }}" // Ensure this URL is correctly replaced
+                "posterImage": thumbUrl
             },
             "vastOptions": {
                 "adList": [],
