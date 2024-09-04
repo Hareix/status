@@ -5,14 +5,14 @@ import datetime
 import pytz
 import os, uvloop
 
-#uvloop.install()
+uvloop.install()
 loop = asyncio.get_event_loop()
 
 app = Client(
     name = "cheems",
     api_id = int(os.environ.get("API_ID", "6")),
     api_hash = os.environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e"),
-    session_string = os.environ.get("SESSION_NAME", "BQAS828Av7zhttRM3-0eKc9TfwlupJCntQhMxUh0xpSYGX38SI-XsQ2f-2z2-ETiiTKRhBOKdUEBScjsuNXdzRMiBD9f-Ddh44pcy1TyODdEwBXGuUiOBm_pdAwziQaU02WpT7AFl1QyTiGkBlZUKcSqMRSzXoUcFLBz9cSWYRKTobfFWgPvn7aAP9cBosebz5WuFeUBFSwJ2CcYNzWE_8pkSZQ9RdtDuOiRvYC-Jspcev1WOyuUyESrTyXTkDeg9w5a4U8GuBXhPYPgz-R7_DjRaLqg24rMgKK_quE8w4X8TpufMMUKBRqXi2T2R0byaN0U6xOR7AMAXoCHug3ce5UCm0AGNgAAAAEu5gwJAA")
+    session_string = os.environ.get("SESSION_NAME", "BQAS828AaYPna-g2hqevY61V8x4kcNt4hHY4Ixqs8FncZBWbGGiDIX92qMMsbB3pg755XzuPd7hbVCK8f_FYZ2KTyunWBXH1WUKDArbczxadyYQ-WS2x6a6N-SydydAkR-W0j3oymhPsXT8kBgrkHodetpm5t0pyPqWHZchj0p9QWBlAX-QiGpEy4Ukf-cC_GNnX5kFvPGbUpyMv_mHI6925qDScfQPRwMHe0vC2C0EQjf9ZmeQAk5kUvxdj1HZDQjP4k_R15besxpIdOKdRI7AoPHI_xja0zntNfFQjujL2tC1ak8GI69-8U11AgZAIRMCMykKepdL0gZgcZ6SejJWaz5tS7wAAAAEu5gwJAA")
 )
 
 TIME_ZONE = os.environ.get("TIME_ZONE", "Asia/Kolkata")
