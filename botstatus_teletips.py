@@ -46,7 +46,7 @@ async def main_teletips():
                         else:
                             xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n\n🟢 **STATUS**: alive ✅"                     
                     except FloodWait as e:
-                        await asyncio.sleep(e.v)            
+                        await asyncio.sleep(e.value)            
                 time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
                 last_update = time.strftime(f"%d %b %Y")
                 last_upstat = time.strftime(f"%I:%M %p")
