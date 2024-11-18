@@ -37,12 +37,7 @@ async def main_teletips():
                         async for zzz_teletips in app.get_chat_history(bot, limit = 1):                        
                          bbb = zzz_teletips.id
                         if aaa == bbb:
-                            xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n\n🔴 **STATUS**: down ❌"
-                            for bot_admin_id in BOT_ADMIN_IDS:
-                                try:
-                                    await app.send_message(int(bot_admin_id), f"🚨 **Beep! Beep!! @{bot} is down** ❌")
-                                except Exception:
-                                    pass
+                            xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n\n🔴 **STATUS**: down ❌"                          
                         else:
                             xxx_teletips += f"\n\n🤖 **BOT**: @{bot}\n\n🟢 **STATUS**: alive ✅"                     
                     except FloodWait as e:
